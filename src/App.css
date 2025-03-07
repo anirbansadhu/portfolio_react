@@ -288,15 +288,16 @@ body {
 }
 
 .view-button {
-  background-color: white;
-  color:#007bff;
+  background-color: grey;
+  color:white;
   text-decoration: none;
   padding: 10px;
-  border-radius:10px;
-  border: 1px black solid;
+  border-radius:50%;
   margin-left: 10%;
-  padding-top: 2px;
+  padding-top: 2px ;
   padding-bottom: 2px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .view-button:hover {
@@ -304,6 +305,16 @@ body {
   color: white;
 }
 
+.view-icon {
+  color: #007bff;
+  font-size: 20px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.view-icon:hover {
+  color: #0056b3;
+}
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {

@@ -14,7 +14,7 @@ import MongoDB from "./mongodb.png";
 
 
 
-import { FaEnvelope, FaLinkedin, FaGithub, FaPhone ,FaTimes,FaBars} from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaPhone ,FaTimes,FaBars,FaEye} from "react-icons/fa";
 import { useEffect,useState } from "react";
 
 
@@ -117,34 +117,34 @@ function App() {
     </div>
   </div>
 
-  {/* Certificates Section */}
-  <div className="sub-section">
-    <h3 className="sub-section-title">Certificates</h3>
-    <ul className="certificates">
-      <li>
-        React.js Course by Scaler 
-        <a 
-          href="https://moonshot.scaler.com/s/li/CK8HT21QBh" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="view-button"
-        >
-          View
-        </a>
-      </li>
-      <li>
-        IOT Course by NPTEL-IITKGP
-        <a 
-          href="https://archive.nptel.ac.in/content/noc/NOC23/SEM1/Ecertificates/106/noc23-cs51/Course/NPTEL23CS51S5301001004062673.jpg" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="view-button"
-        >
-          View
-        </a>
-      </li>
-    </ul>
-  </div>
+{/* Certificates Section */}
+<div className="sub-section">
+  <h3 className="sub-section-title">Certificates</h3>
+  <ul className="certificates">
+    <li>
+      React.js Course by Scaler 
+      <a 
+        href="https://moonshot.scaler.com/s/li/CK8HT21QBh" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="view-icon"
+      >
+        <FaEye />
+      </a>
+    </li>
+    <li>
+      IOT Course by NPTEL-IITKGP
+      <a 
+        href="https://archive.nptel.ac.in/content/noc/NOC23/SEM1/Ecertificates/106/noc23-cs51/Course/NPTEL23CS51S5301001004062673.jpg" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="view-icon"
+      >
+        <FaEye />
+      </a>
+    </li>
+  </ul>
+</div>
 </section>
 
 
@@ -298,7 +298,7 @@ function App() {
    rel="noopener noreferrer" href="/"><button onClick={()=>{ 
              }} style={{padding:3,borderRadius:10,borderBlockColor:"blue",paddingLeft:5,paddingRight:5,marginRight:10}}>Visit Site</button></a>
    <a   target="_blank" 
-   rel="noopener noreferrer" href="https://github.com/anirbansadhu"><button onClick={()=>{ 
+   rel="noopener noreferrer" href="https://github.com/anirbansadhu/portfolio_react/tree/master"><button onClick={()=>{ 
              }} style={{padding:3,borderRadius:10,borderBlockColor:"blue",paddingLeft:5,paddingRight:5,marginRight:10}}>View Codes</button></a>
           </div>
      
