@@ -1,38 +1,354 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+
+.container {
+  /* max-width: 900px; */
+  margin: auto;
+  padding: 20px;
+}
+
+
+.header {
   text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  color: white;
+  position: relative;
+  transition: 0.3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header:hover {
+  opacity: 0.9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  border: 4px solid white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar {
+  background-color: #0056b3;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
+.nav-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.nav-list li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+}
+
+.section {
+  background: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+  scroll-margin-top: 100px; /* Adjust based on navbar height */
+}
+
+.section:hover {
+  transform: scale(1.02);
+}
+
+
+.section-title {
+  color: #007bff;
+}
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  background: linear-gradient(135deg,  #0056b3,#b1d4fa);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project-title {
+  font-size: 1.2em;
+  color: white;
+}
+.project-subtitle {
+  font-size: 0.8em;
+  color: white;
+}
+.project-description{
+  color: white;
+
+}
+
+.project button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid blue;
+  margin-right: 10px;
+  background: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.project button:hover {
+  background: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.skill {
+  background: linear-gradient(135deg,  #f0f2f5,#d1e4f8);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.skill-name {
+  font-weight: bold;
+  color: black;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.contact-info svg {
+  font-size: 1.2rem;
+  color: black; /* Icon color */
+}
+
+.contact-link {
+  color: blue; /* Makes text black */
+  text-decoration: none; /* Removes underline */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds space between icon and text */
+}
+
+.contact-link:hover {
+  color: #555; /* Slightly darker color on hover */
+}
+
+.work-experience {
+  background: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.job.card {
+  background: linear-gradient(135deg, #0056b3, #b1d4fa);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 15px;
+}
+
+.job.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.job-title {
+  font-size: 1.2em;
+  color: white;
+}
+
+.company-name,
+.job-duration {
+  font-weight: bold;
+  color: #f8f9fa;
+}
+
+.job-description {
+  color: white;
+}
+
+
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  margin-top: 20px;
+}
+.menu-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  color: white;
+  display: none;
+}
+
+.education {
+  padding: 20px;
+}
+
+.degree-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.degree.card {
+  background: #f4f4f4;
+  padding: 5px;
+  border-left: 5px solid #007bff;
+  border-radius: 5px;
+}
+.degree-title{
+  font-size: 18px;
+}
+.certificates {
+  list-style: none;
+  padding: 0;
+}
+ 
+.certificates li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  font-weight: 300;
+  
+}
+
+.view-button {
+  background-color: white;
+  color:#007bff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius:10px;
+  border: 1px black solid;
+  margin-left: 10%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.view-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+  .navbar{
+    padding: 3px 0;
+    min-height: 50;
+  }
+  .nav-list li {
+    display: block;
+    margin: 8px 0;
+  }
+  .nav-list {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .menu-button{
+    display: block;
+  }
+  .section{
+    scroll-margin-top: 200px; /* Adjust based on navbar height */
+
+  }
+ 
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 15px;
+  }
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+  .section {
+    padding: 15px;
+  }
+  .footer {
+    padding: 8px;
   }
 }
